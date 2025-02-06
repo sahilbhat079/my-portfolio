@@ -3,6 +3,7 @@ import styles from "./About.module.css";
 // import profileImg from "../../assets/profile.jpg"; // Replace with your image
 import { FaDownload } from "react-icons/fa";
 import aboutmeimage from '/assets/aboutme.jpeg'
+import cvfile from "/assets/Cv.pdf";
 
 const About = (
   {
@@ -10,7 +11,7 @@ const About = (
     experience = "1+ Years", // Default experience
     completedProjects = "20+ Projects", // Default completed projects count
     description = "Full-stack developer with a strong focus on backend technologies. I build robust web applications using Node.js, Express.js, and MongoDB, while also ensuring seamless UI/UX design for an intuitive user experience. With years of experience, I’ve successfully delivered many projects that have made clients happy",
-    cvDownloadLink = "/assets/Cv.pdf", // Default CV link
+    cvDownloadLink =cvfile , // Default CV link
   }
 ) => {
   return (

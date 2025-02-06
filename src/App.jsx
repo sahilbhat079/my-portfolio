@@ -65,7 +65,7 @@ function App() {
 
   return (
     <>
-      <div className={themeName === "dark" ? "dark" : "light"}>
+      
         <Navbar Name="Sahil Gani" />
         
         {/* Use Suspense to lazy load the image */}
@@ -87,7 +87,7 @@ function App() {
           linkedinLink="https://www.linkedin.com/in/sahilgani"
           email="sahilgani.sahilgani@gmail.com"
         />
-      </div>
+
     </>
   );
 }
