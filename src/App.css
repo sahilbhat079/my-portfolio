@@ -19,7 +19,7 @@ html {
 
 
 
-
+/* 
 body.light {
   --background-color: #fff;
   --text-color: #333;
@@ -46,4 +46,4 @@ body {
 .navLinks li a:hover,
 .navLinks li a.active {
   color: var(--hover-link-color);
-}
+} */
