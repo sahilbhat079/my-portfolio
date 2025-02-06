@@ -1,0 +1,59 @@
+.footer {
+    background-color: #333; /* Dark background for footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .copyRight {
+    margin-bottom: 10px;
+  }
+  
+  .socialLinks {
+    margin: 15px 0;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #2980b9; /* Slightly lighter blue on hover */
+    transform: scale(1.1);
+  }
+  
+  .contact {
+    margin-top: 10px;
+  }
+  
+  .contact a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact a:hover {
+    color: #2980b9; /* Blue hover color */
+  }
+  
+  @media (max-width: 768px) {
+    .socialLinks {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .icon {
+      margin: 5px;
+    }
+  }
+  

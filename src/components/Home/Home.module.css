@@ -1,0 +1,168 @@
+.homeSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 0 20px;
+    animation: fadeInSection 1.5s ease-out;
+  }
+
+/* Dark mode styles (applied when themeName === 'dark') */
+.dark .homeSection {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
+
+
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .textContent {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    opacity: 0; /* Initially hidden for animation */
+    animation: slideInText 1s ease-out forwards;
+    animation-delay: 0.5s; /* Delay to stagger the animations */
+  }
+  
+  .name {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Dark mode override for Role */
+.dark .role {
+  color: #bbb; /* Slightly dimmed white in dark mode */
+}
+
+  .description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #007bff;
+    transition: color 0.3s ease;
+    opacity: 0; /* Initially hidden for animation */
+    animation: fadeInIcons 1s ease-out forwards;
+    animation-delay: 1.2s; /* Delay to stagger the animations */
+  }
+  
+  .icon:hover {
+    color: #0056b3;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0; /* Initially hidden for animation */
+    animation: scaleUpImage 1s ease-out forwards;
+    animation-delay: 1s; /* Delay to stagger the animations */
+  }
+  
+  .profileImage {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animation for fading in the entire section */
+  @keyframes fadeInSection {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for sliding in the text content */
+  @keyframes slideInText {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for scaling up the profile image */
+  @keyframes scaleUpImage {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for fading in social media icons */
+  @keyframes fadeInIcons {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .textContent {
+      max-width: 100%;
+      padding: 20px 0;
+    }
+  
+    .imageContainer {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  
+    .profileImage {
+      width: 200px;
+      height: 200px;
+    }
+  }
+/* Add styling for Full Stack Developer title */
+.role {
+  font-size: 24px; /* Make it a little larger */
+  font-weight: bold; /* Make the text bold */
+  color: #514e4e; /* Dark text color */
+  margin-top: 2px; /* Small margin from the name */
+  margin-bottom: 5px; /* Space before the description */
+  padding-left: 3px; /* Optional: Slight padding to bring it closer to the name */
+}
+
+  

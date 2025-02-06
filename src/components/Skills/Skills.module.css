@@ -1,0 +1,226 @@
+/* General styles for the section */
+.skillsSection {
+  text-align: center;
+  padding: 50px;
+  animation: fadeIn 1s ease-in-out;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles for Skills */
+.skillsSection.dark {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+}
+
+/* Title and subtitle styles */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Dark mode title and subtitle */
+.skillsSection.dark .title {
+  color: #f5f5f5;
+}
+
+.skillsSection.dark .subtitle {
+  color: #bbb;
+}
+
+/* Skills container with flexbox layout */
+.skillsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeIn 1s ease-in-out;
+  padding: 10px;
+}
+
+/* Card styling for each skill category */
+.card {
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: left;
+  animation: zoomIn 0.8s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+/* Dark mode card background */
+.skillsSection.dark .card {
+  background-color: #444;
+  color: #f5f5f5;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Card list styles */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each skill item */
+.skillItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Dark mode for skill items */
+.skillsSection.dark .skillItem {
+  border-bottom: 1px solid #555;
+}
+
+.skillItem:last-child {
+  border-bottom: none;
+}
+
+.skillItem span {
+  color: #888;
+}
+
+/* Dark mode skill item text color */
+.skillsSection.dark .skillItem span {
+  color: #ccc;
+}
+
+/* Styling for icons in skill items */
+.icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on icons */
+.skillItem:hover .icon {
+  color: #007bff;
+}
+
+/* Dark mode icon styling */
+.skillsSection.dark .icon {
+  color: #f5f5f5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens (e.g., 768px and below) */
+@media (max-width: 768px) {
+  .skillsSection {
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .skillsContainer {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .skillItem {
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    font-size: 1.1rem;
+  }
+}
+
+/* For mobile screens (e.g., 480px and below) */
+@media (max-width: 480px) {
+  .skillsSection {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .skillsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .skillItem {
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+}
