@@ -10,7 +10,7 @@ const About = (
     experience = "1+ Years", // Default experience
     completedProjects = "20+ Projects", // Default completed projects count
     description = "Full-stack developer with a strong focus on backend technologies. I build robust web applications using Node.js, Express.js, and MongoDB, while also ensuring seamless UI/UX design for an intuitive user experience. With years of experience, I’ve successfully delivered many projects that have made clients happy",
-    cvDownloadLink = "/cv.pdf", // Default CV link
+    cvDownloadLink = '/assets/cv.pdf', // Default CV link
   }
 ) => {
   return (
