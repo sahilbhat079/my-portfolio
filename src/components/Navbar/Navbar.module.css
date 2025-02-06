@@ -82,6 +82,7 @@
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  gap: 0.5rem; /* Add gap between icon and text */
   transition: color 0.3s ease;
 }
 
@@ -168,11 +169,24 @@
   }
 
   .mobileMenu {
-    display: none;
+    display: block; /* Ensure mobile menu is displayed */
   }
 
   .mobileMenu.open {
+    display: block; /* Ensure mobile menu is displayed when open */
+  }
+
+  /* Ensure theme toggle button is visible in mobile mode */
+  .themeButton {
     display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  /* Adjust icon size for mobile */
+  .themeButton .icon {
+    font-size: 1.2rem;
   }
 }
 

@@ -10,7 +10,7 @@ const About = (
     experience = "1+ Years", // Default experience
     completedProjects = "20+ Projects", // Default completed projects count
     description = "Full-stack developer with a strong focus on backend technologies. I build robust web applications using Node.js, Express.js, and MongoDB, while also ensuring seamless UI/UX design for an intuitive user experience. With years of experience, I’ve successfully delivered many projects that have made clients happy",
-    cvDownloadLink = "/Cv.pdf", // Default CV link
+    cvDownloadLink = "/assets/Cv.pdf", // Default CV link
   }
 ) => {
   return (
@@ -41,11 +41,9 @@ const About = (
             </div>
           </div>
           <p className={styles.description}>
-           {description}
+            {description}
           </p>
-          <a href={cvDownloadLink} 
-            download="cv.pdf" 
-          className={styles.downloadBtn}>
+          <a href={cvDownloadLink} download="cv.pdf" className={styles.downloadBtn}>
             Download CV <FaDownload />
           </a>
         </div>
