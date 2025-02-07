@@ -66,28 +66,43 @@ const Projects = () => {
       <div className={styles.projectsContainer}>
         {projects.map((project) => (
           <div key={project.id} className={`${styles.card} ${themeName === "dark" ? styles.darkCard : ""}`}>
-            <img src={project.image} alt={project.title} className={styles.thumbnail} />
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              className={styles.thumbnail} 
+              loading="lazy"
+            />
             <h3>{project.title}</h3>
             <div className={styles.links}>
-              {project.liveLink && (
+              {project.liveLink ? (
                 <a
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${styles.liveBtn} ${themeName === "dark" ? styles.darkLink : ""}`}
+                  aria-label={`Live preview of ${project.title}`}
                 >
                   <FaLink /> Live Preview
                 </a>
+              ) : (
+                <button className={`${styles.liveBtn} ${styles.disabled}`} disabled>
+                  <FaLink /> Live Preview
+                </button>
               )}
-              {project.githubLink && (
+              {project.githubLink ? (
                 <a
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${styles.githubBtn} ${themeName === "dark" ? styles.darkLink : ""}`}
+                  aria-label={`GitHub repository of ${project.title}`}
                 >
                   <FaGithub /> GitHub
                 </a>
+              ) : (
+                <button className={`${styles.githubBtn} ${styles.disabled}`} disabled>
+                  <FaGithub /> GitHub
+                </button>
               )}
             </div>
           </div>

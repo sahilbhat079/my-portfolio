@@ -10,7 +10,7 @@
 
 /* Dark mode styles (applied when themeName === 'dark') */
 .dark .homeSection {
-  background-color: #121212; /* Dark background */
+  background-color: #121212 !important; /* Dark background */
   color: #e0e0e0; /* Light text color */
 }
 

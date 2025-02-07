@@ -10,12 +10,12 @@
 .title {
   font-size: 2rem;
   font-weight: bold;
-  color: #2c3e50; /* Dark blue-grey */
+  color: #333; /* Dark blue-grey */
   margin-bottom: 10px;
 }
 
 .subtitle {
-  color: #7f8c8d;
+  color:#777;
   margin-bottom: 40px;
 }
 
@@ -147,22 +147,32 @@ p {
 /* Dark Mode */
 .darkMode {
   background: #121212 !important;
+  color: #ffffff !important;
+}
+
+
+.darkMode .title {
   color: #ffffff;
 }
 
+.darkMode .subtitle {
+  color: #bbbbbb;
+}
+
+
 .darkCard {
   background: #1e1e1e !important;
-  color: #ffffff;
+  color: #ffffff !important;
   border: 1px solid #333;
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 .darkCard h3 {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .darkCard p {
-  color: #d1d1d1;
+  color: #d1d1d1 !important;
 }
 
 /* Dark Mode Links */
@@ -173,4 +183,22 @@ p {
 
 .darkLink:hover {
   background: #444 !important;
+}
+
+
+
+/* Add to Projects.module.css */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  background: #f0f0f0; /* Light grey background on hover */
+}
+
+.darkCard:hover {
+  background: #2a2a2a !important; /* Darker background on hover in dark mode */
 }
