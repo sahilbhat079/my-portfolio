@@ -41,14 +41,10 @@
     margin-bottom: 10px;
   }
   
-  /* Dark mode override for Role */
-.dark .role {
-  color: #bbb; /* Slightly dimmed white in dark mode */
-}
 
   .description {
     font-size: 18px;
-    color: #555;
+    color: #556;
     margin-bottom: 20px;
   }
   
@@ -166,3 +162,32 @@
 }
 
   
+
+
+/* Dark mode background for the home section */
+.darkMode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Dark mode text styles */
+.darkMode .name {
+  color: #ffffff !important;
+}
+
+.darkMode .role {
+  color: #bbbbbb !important;
+}
+
+.darkMode .description {
+  color: #cccccc !important;
+}
+
+/* Dark mode for icons */
+.darkMode .icon {
+  color: #1e90ff !important; /* Lighter blue in dark mode */
+}
+
+.darkMode .icon:hover {
+  color: #5599ff;
+}

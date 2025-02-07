@@ -10,7 +10,7 @@ const Home = ({ title, description, socialmedialinks }) => {
 
 
   return (
-    <section id="home" className={`${styles.homeSection} ${themeName === "dark" ? "dark" : ""}`}>
+    <section id="home" className={`${styles.homeSection} ${themeName === "dark" ? styles.darkMode : ""}`}>
     <div className={styles.content}>
       <div className={styles.textContent}>
         <h1 className={styles.name}>{title}</h1>
