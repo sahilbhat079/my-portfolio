@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState ,useContext } from "react";
 import styles from "./Contact.module.css";
 import { FaEnvelope, FaWhatsapp, FaFacebookMessenger, FaPaperPlane } from "react-icons/fa";
 import emailjs from "emailjs-com"; // Import emailjs
+import { ThemeContext } from "../../contexts/theme";
 
 const ContactMe = ({
   email = "sahilgani.sahilgani@gmail.com", // Default email
@@ -21,6 +22,7 @@ const ContactMe = ({
   const [isSuccess, setIsSuccess] = useState(null); // to track success/failure
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false); // Loading state for the button
+  const { themeName } = useContext(ThemeContext);
 
   // Handle form input changes
   const handleChange = (e) => {
@@ -75,7 +77,10 @@ const ContactMe = ({
   };
 
   return (
-    <section id="contact" className={styles.contactSection}>
+    <section
+    id="contact"
+    className={`${styles.contactSection} ${themeName === "dark" ? styles.dark : ""}`}
+  >
       <div className={styles.container}>
         
         {/* Left Side - Contact Methods */}
